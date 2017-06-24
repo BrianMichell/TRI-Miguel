@@ -39,7 +39,7 @@ public class Robot extends IterativeRobot {
 
 		chassis = new RobotDrive(0, 1);
 		driver = new Joystick(0);
-		driftPercentage = 0.25;
+		driftPercentage = 0.5;
 
 		new Thread(() -> {
 			while (true) {
