@@ -167,7 +167,7 @@ public class Robot extends IterativeRobot {
 	 */
 	public void lineCrossAuto() {
 		if (time.get() < 7) { // Drive forward 7 seconds
-			chassis.arcadeDrive(0.5, drift(0.5));
+			chassis.arcadeDrive(-0.5, drift(-0.5));
 		} else { // Stop
 			chassis.arcadeDrive(0, 0);
 			;
@@ -180,11 +180,11 @@ public class Robot extends IterativeRobot {
 	 */
 	public void leftPegAuto() {
 		if (time.get() < 5) { // Drive forward 5 seconds
-			chassis.arcadeDrive(05, drift(0.5));
+			chassis.arcadeDrive(-0.5, drift(-0.5));
 		} else if (time.get() < 7.5 && time.get() > 5.01) { // Turn Left for 2.5 seconds
 			chassis.arcadeDrive(0, 0.5);
 		} else if (time.get() > 7.5 && time.get() < 10) { // Drive to peg for 2.5 seconds
-			chassis.arcadeDrive(0.5, drift(0.5));
+			chassis.arcadeDrive(-0.5, drift(-0.5));
 		} else { // Stop
 			chassis.arcadeDrive(0, 0);
 		}
@@ -196,11 +196,11 @@ public class Robot extends IterativeRobot {
 	 */
 	public void rightPegAuto() {
 		if (time.get() < 5) { // Drive forward 5 seconds
-			chassis.arcadeDrive(05, drift(0.5));
+			chassis.arcadeDrive(-0.5, drift(-0.5));
 		} else if (time.get() < 7.5 && time.get() > 5.01) { // Turn Right for 2.5 seconds
 			chassis.arcadeDrive(0, -0.5);
 		} else if (time.get() > 7.5 && time.get() < 10) { // Drive to peg for 2.5 seconds
-			chassis.arcadeDrive(0.5, drift(0.5));
+			chassis.arcadeDrive(-0.5, drift(-0.5));
 		} else { // Stop
 			chassis.arcadeDrive(0, 0);
 		}
